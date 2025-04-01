@@ -15118,6 +15118,43 @@
       "RelatedPerson"]
     }
   },
+    {
+      "fullUrl" : "http://hl7.org/fhir/SearchParameter/Consent-provision-code",
+      "resource" : {
+        "resourceType" : "SearchParameter",
+        "id" : "Consent-provision-code",
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+          "valueCode" : "trial-use"
+        }],
+        "url" : "http://hl7.org/fhir/SearchParameter/Consent-provision-code",
+        "version" : "4.0.1",
+        "name" : "provision-code",
+        "status" : "draft",
+        "experimental" : false,
+        "date" : "2019-11-01T09:29:23+11:00",
+        "publisher" : "Health Level Seven International (Community Based Collaborative Care)",
+        "contact" : [{
+          "telecom" : [{
+            "system" : "url",
+            "value" : "http://hl7.org/fhir"
+          }]
+        },
+          {
+            "telecom" : [{
+              "system" : "url",
+              "value" : "http://www.hl7.org/Special/committees/homehealth/index.cfm"
+            }]
+          }],
+        "description" : "Resource for the actor (or group, by role)",
+        "code" : "provision-code",
+        "base" : ["Consent"],
+        "type" : "token",
+        "expression": "Consent.provision.code.coding | Consent.provision.provision.code.coding",
+        "xpath": "f:Consent/f:provision/f:code/f:coding | f:Consent/f:provision/f:provision/f:code/f:coding",
+        "xpathUsage" : "normal"
+      }
+    },
   {
     "fullUrl" : "http://hl7.org/fhir/SearchParameter/Consent-category",
     "resource" : {
