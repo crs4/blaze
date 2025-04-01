@@ -1,0 +1,17 @@
+services:
+  blaze:
+    image: "samply/blaze:latest"
+    #build:
+    #  context: .
+    environment:
+      BASE_URL: "http://localhost:8080"
+      JAVA_TOOL_OPTIONS: "-Xmx2g"
+      LOG_LEVEL: "debug"
+      DB_SEARCH_PARAM_BUNDLE: "/app/custom-search-parameters.json"
+    ports:
+    - "8089:8080"
+    volumes:
+    - ./custom-search-parameters.json:/app/custom-search-parameters.json:ro
+    - "blaze-data:/app/data"
+volumes:
+  blaze-data:
