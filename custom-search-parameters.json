@@ -15146,12 +15146,49 @@
               "value" : "http://www.hl7.org/Special/committees/homehealth/index.cfm"
             }]
           }],
-        "description" : "Resource for the actor (or group, by role)",
+        "description" : "Parameter to search by provision code at both first level and nested level",
         "code" : "provision-code",
         "base" : ["Consent"],
         "type" : "token",
         "expression": "Consent.provision.code.coding | Consent.provision.provision.code.coding",
         "xpath": "f:Consent/f:provision/f:code/f:coding | f:Consent/f:provision/f:provision/f:code/f:coding",
+        "xpathUsage" : "normal"
+      }
+    },
+    {
+      "fullUrl" : "http://hl7.org/fhir/SearchParameter/Consent-provision-data",
+      "resource" : {
+        "resourceType" : "SearchParameter",
+        "id" : "Consent-provision-data",
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+          "valueCode" : "trial-use"
+        }],
+        "url" : "http://hl7.org/fhir/SearchParameter/Consent-provision-data",
+        "version" : "4.0.1",
+        "name" : "provision-data",
+        "status" : "draft",
+        "experimental" : false,
+        "date" : "2019-11-01T09:29:23+11:00",
+        "publisher" : "Health Level Seven International (Community Based Collaborative Care)",
+        "contact" : [{
+          "telecom" : [{
+            "system" : "url",
+            "value" : "http://hl7.org/fhir"
+          }]
+        },
+          {
+            "telecom" : [{
+              "system" : "url",
+              "value" : "http://www.hl7.org/Special/committees/homehealth/index.cfm"
+            }]
+          }],
+        "description" : "Parameter to search by provision data at both first level and nested level",
+        "code" : "provision-data",
+        "base" : ["Consent"],
+        "type" : "token",
+        "expression": "Consent.provision.data.reference | Consent.provision.provision.data.reference",
+        "xpath": "f:Consent/f:provision/f:data/f:reference | f:Consent/f:provision/f:provision/f:data/f:reference",
         "xpathUsage" : "normal"
       }
     },
